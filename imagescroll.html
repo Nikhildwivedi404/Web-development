@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Image Slide</title>
+   <style>
+    .slideshow-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.fade {
+    animation: fade 3s infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.slideshow-container {
+    background-color: rgba(0, 0, 0, 0.99);
+    width: 100vw;
+    height: 50vh;
+
+}
+   </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <div class="slide">
+        <img src="img.avif" alt="Image 1">
+    </div>
+    <div class="slide">
+        <img src="img.avif" alt="Image 2">
+    </div>
+    <div class="slide">
+        <img src="img.avif" alt="Image 3">
+    </div>
+    <!-- Add more slides as needed -->
+</div>
+
+<script >
+    document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    function showSlide() {
+        slides.forEach(slide => slide.classList.remove('fade'));
+        slides[index].classList.add('fade');
+        index = (index + 1) % slides.length;
+    }
+
+    setInterval(showSlide, 4000); // Change image every 4 seconds (adjust as needed)
+});
+
+</script>
+</body>
+</html>

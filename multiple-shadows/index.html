@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    .shadow-text{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:#a99292;
+    }
+    .shadow-text{
+        font-size: 2em;
+        text-align: center;
+        color:#cf3030;
+        position: relative;
+        text-shadow: -3px 3px 0 #00f, -3px -3px 0 rgb(21, 215, 99);
+    }
+
+    .shadow-text::before,
+    .shadow-text::after{
+        content:attr(data-text);
+        position: absolute;
+        top:0;
+        left:0;
+        color:rgb(255, 0, 8);
+    }
+
+    .shadow-text::before{
+        z-index: -1;
+        -webkit-transform: translate(-10%,-10%);
+        transform: translate(-10%,-10%);
+    }
+
+    .shadow-text::after{
+        z-index:-2;
+        -webkit-transform: translate(10%,10%);
+        transform: translate(10%,10%);
+
+    }
+</style>
+</head>
+<body>
+
+    <h1 class="shadow-text">Nikhil Dwivedi</h1>
+    
+</body>
+</html>

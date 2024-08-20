@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary-color:red;
+            --custom-width:200px;
+        }
+        .container{
+            background-color: aqua;
+            height: 500px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .box{
+            /* --primary-color:red; */
+            width: var(--custom-width);
+            --custom-width:295px;
+            background-color: aquamarine;
+            /* width:var(--custom-width); */
+            /* background-color: antiquewhite; */
+            /* width: 220px; */
+            height: 295px;
+            border: 1px solid var(--primary-color);
+            /* border: 1px solid red; */
+            margin: 5px;
+            padding: 5px;
+            /* box-shadow:-10px 70px var(--primary-color) ; */
+            /* overflow: auto; */
+            /* box-shadow: 10px 15px red ; */
+            /* box-shadow: -10px -15px red ; */
+
+            /* box-shadow: 10px 15px 85px red; */
+
+            /* box-shadow: 10px 15px 5px 90px red; */
+
+            /* box-shadow: inset 10px 15px red; */
+            /* box-shadow: 10px 15px red, 15px 8px yellow; */
+        }
+        img{
+            height: 100px;
+            width: 100px;
+        }
+        #head1{
+            /* text-shadow: 10px 3px 1px white; */
+            /* text-shadow: yellow 12px 13px 2px; */
+            /* text-shadow: white 12px 13px; */
+            text-shadow: 12px 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="download (1).png"/>
+            <h2 id="head1">Web Dev</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Quia adipisci delectus inventore debitis cumque ipsam 
+            consequuntur quam quo soluta, praesentium neque rem 
+            deserunt quibusdam temporibus.</p>
+        </div>
+    </div>
+</body>
+</html>
